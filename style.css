@@ -94,4 +94,32 @@ textarea:not([rows]) {
 body {
   height: 100vh;
   background-color: black;
+  margin: 0 2em;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+}
+
+.title {
+  display: flex;
+  justify-content: flex-start;
+  height: 100vh;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* Align images to the top */
+  gap: 1em;
+  flex: 1;
+}
+
+.images img {
+  flex: 1 1 calc(33.333% - 1em); /* Ensure three columns */
+  max-width: calc(33.333% - 1em); /* Prevent images from overflowing */
 }
