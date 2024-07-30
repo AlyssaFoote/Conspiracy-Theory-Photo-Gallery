@@ -108,18 +108,69 @@ body {
   display: flex;
   justify-content: flex-start;
   height: 100vh;
+  gap: 0.5em;
 }
 
 .images {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start; /* Align images to the top */
+  align-items: flex-start;
   gap: 1em;
   flex: 1;
+  margin: 2em;
 }
 
 .images img {
-  flex: 1 1 calc(33.333% - 1em); /* Ensure three columns */
-  max-width: calc(33.333% - 1em); /* Prevent images from overflowing */
+  flex: 1 1 calc(33.333% - 1em);
+  max-width: calc(33.333% - 1em);
+  border: 4px white solid;
+  transition: filter 0.3s ease;
+}
+
+.images img:hover {
+  filter: brightness(0.5) sepia(1) hue-rotate(90deg) saturate(4);
+}
+
+/* Second Page */
+
+.inspection {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4em;
+  margin: 10em;
+  color: white;
+  height: 100vh;
+}
+
+.largeImage {
+  flex: 1 0.5 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.largeImage img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border: 9.262px solid #fff;
+}
+
+.conspiracyText {
+  flex: 1 1 calc(50% - 1em);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.conspiracyText p {
+  margin-top: 0;
+  align-self: baseline;
+}
+
+.back {
+  color: white;
 }
